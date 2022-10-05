@@ -25,6 +25,9 @@
   margin-right: auto;
   height: 70%;
 }
+.card__body > img {
+  justify-content: center;
+}
 
 .card__stats {
   padding-top: 10px;
@@ -45,6 +48,8 @@
 
 .card__stats__type:hover {
   cursor: pointer;
+  background-color: rgb(0,0,0);
+  color:coral;
 }
 
 .card__stats__type:active {

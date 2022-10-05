@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+import { pokemonData } from 'src/app/models/pokemonData';
 import { PokemonService } from 'src/app/services/pokemon.service';
 
 @Component({
@@ -7,7 +8,8 @@ import { PokemonService } from 'src/app/services/pokemon.service';
   styleUrls: ['./card.component.css']
 })
 export class CardComponent implements OnInit {
-  name:string = "CHARIZARD"
+  pokemon:pokemonData | any
+  name:string = "charizard"
   attributesTypes:string[] = ['FIRE', 'ROCK']
 
   constructor(
@@ -15,10 +17,22 @@ export class CardComponent implements OnInit {
   ) { }
 
   ngOnInit(): void {
-    this.service.getPokemon("/pikachu").subscribe(
+    this.service.getPokemon("/charizard").subscribe(
       {
-        next: (res) => console.log(res),
-        error: (err) => console.log(err)
+        next: (res) => {
+
+          this.pokemon = {
+            id:res.id,
+            name:res.name,
+            sprites:res.sprites,
+            types:res.types
+          }
+          console.log(res)
+          console.log(this.pokemon)
+        },
+        error: (err) => {
+          console.log(err)
+        }
       }
     )
   }
