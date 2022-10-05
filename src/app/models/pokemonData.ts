@@ -4,5 +4,12 @@ export type pokemonData = {
   }
   name:string
   id:number
-  types:[]
+  types:{
+    slot: number,
+    type: {
+      name: string,
+      url: string
+    },
+  }[]
+
 }
