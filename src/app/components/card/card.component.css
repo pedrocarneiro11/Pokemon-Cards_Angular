@@ -7,6 +7,11 @@
   flex-direction: column;
   background-color: #232323;
   border-radius: 10px;
+  align-items: center;
+}
+.card input {
+  width: 90%;
+  border-radius: 4px;
 }
 
 .card__title {
@@ -15,6 +20,7 @@
 }
 
 .card > .card__title > h3 {
+  text-transform: capitalize;
   color: white;
 }
 
@@ -27,6 +33,7 @@
 }
 .card__body > img {
   justify-content: center;
+  width: 100%;
 }
 
 .card__stats {
@@ -44,6 +51,7 @@
   padding: 5px;
   margin-right: 4px;
   border-radius: 5px;
+  text-transform: capitalize;
 }
 
 .card__stats__type:hover {
