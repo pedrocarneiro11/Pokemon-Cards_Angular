@@ -2,7 +2,7 @@
   <input type="text" (input)="getPokemon($any($event.target).value)">
 
   <div class="card__title">
-    <h3>{{ pokemon.name }}</h3>
+    <h3>{{ pokemon.name | titlecase | HelloPipe}}</h3>
   </div>
 
   <div class="card__body">
@@ -11,7 +11,7 @@
 
   <div class="card__stats">
     <span *ngFor="let t of pokemon.types" class="card__stats__type">
-      {{ t.type.name }}
+      {{ t.type.name | uppercase}}
     </span>
   </div>
 

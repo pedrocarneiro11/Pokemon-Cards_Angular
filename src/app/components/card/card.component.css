@@ -20,7 +20,6 @@
 }
 
 .card > .card__title > h3 {
-  text-transform: capitalize;
   color: white;
 }
 
